@@ -1,3 +1,4 @@
+//#include "pch.h"
 #include <iostream>
 struct node
 {
@@ -16,7 +17,7 @@ void print_list(node* head)
 }
 void add_node(int n, node*& head)
 {
-	node *tmp = new node;
+	node *tmp = (struct node*)malloc(sizeof(struct node));
 	tmp->data = n;
 	tmp->next = NULL;
 
